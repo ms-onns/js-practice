@@ -28,7 +28,7 @@ if (userAge >= 18 && userPasport === true) {
 } else {
   console.log(`Заборона на посадку, зверніться до персоналу`);
 }
-
+console.log("-------------------------------------");
 // ==========================================
 // Логічний оператор "АБО" (Logical OR: ||)
 // ==========================================
@@ -59,7 +59,7 @@ if (isDarkOutside === true || motionDetected === true) {
 } else {
   console.log(`Light OFF`);
 }
-
+console.log("-------------------------------------");
 // ==========================================
 // Логічний оператор "НЕ" (Logical NOT: !)
 // ==========================================
@@ -86,4 +86,17 @@ if (!isPaused) {
   console.log(`Motion On`);
 } else {
   console.log(`Motion Off`);
+}
+console.log("-------------------------------------");
+
+// ==========================================
+// Комбінація логічних операторів (&&, ||, !)
+// ==========================================
+let highSalary = false;
+let goodCreditHistory = true;
+let hasCriminalRecord = false;
+if ((goodCreditHistory === true || highSalary === true) && !hasCriminalRecord) {
+  console.log("Вам надано доступ до кредиту");
+} else {
+  console.log(`Доступ до кредиту відхилено`);
 }
