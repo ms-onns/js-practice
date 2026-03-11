@@ -126,3 +126,23 @@ console.log(`У вас - ${messagesCount} не прочитаних повідо
 let dailyTasks = ["Learn JS", "I love working out"];
 dailyTasks.push("Watch a movie");
 console.log(`${dailyTasks}`);
+console.log("-------------------------------------");
+
+// ==========================================
+// Керування масивами (pop, shift, unshift)
+// ==========================================
+let browserHistory = ["Google", "YouTube", "Netflix"];
+browserHistory.pop();
+console.log(browserHistory);
+
+// ===
+
+let newsFeed = ["Вчорашня новина", "Ранкова новина"];
+newsFeed.unshift("Екстрена новина!");
+console.log(newsFeed);
+
+// ===
+
+let customerQueue = ["Олег", "Марія", "Іван"];
+customerQueue.shift();
+console.log(customerQueue);
