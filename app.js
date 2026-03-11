@@ -146,3 +146,27 @@ console.log(newsFeed);
 let customerQueue = ["Олег", "Марія", "Іван"];
 customerQueue.shift();
 console.log(customerQueue);
+console.log("-------------------------------------");
+
+// ==========================================
+// ТЕМА: Пошук у масивах (includes, indexOf)
+// ==========================================
+let guestList = ["Jhon", "Ben", "Anna"];
+let isInvited = guestList.includes("Anna");
+console.log(isInvited);
+
+// ===
+
+let playlist = ["Phonk", "Chill", "Classic", "Rock"];
+let songIndex = playlist.indexOf("Phonk");
+console.log(songIndex);
+
+// ===
+
+let bannedUsers = ["user123", "hacker99", "spamBot"];
+let currentUser = "hacker99";
+if (bannedUsers.includes(currentUser)) {
+  console.log("Доступ заборонено! Ваш акаунт заблоковано.");
+} else {
+  console.log("Ласкаво просимо!");
+}
