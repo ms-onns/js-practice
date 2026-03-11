@@ -170,3 +170,20 @@ if (bannedUsers.includes(currentUser)) {
 } else {
   console.log("Ласкаво просимо!");
 }
+console.log("-------------------------------------");
+
+// ==========================================
+// VIP Night Club
+// ==========================================
+let clubGuests = ["Anna", "Max", "Jhon"];
+let newVip = "Drake";
+
+if (!clubGuests.includes(newVip)) {
+  console.log("VIP гість прибув! Пропускаємо без черги");
+
+  clubGuests.unshift(newVip);
+  clubGuests.pop();
+} else {
+  console.log("Цей гість вже в клубі");
+}
+console.log(clubGuests);
