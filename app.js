@@ -100,3 +100,29 @@ if ((goodCreditHistory === true || highSalary === true) && !hasCriminalRecord) {
 } else {
   console.log(`Доступ до кредиту відхилено`);
 }
+console.log("-------------------------------------");
+
+// ==========================================
+// Масиви (Списки даних / Arrays)
+// ==========================================
+
+let favoriteMovies = ["Harry Potter", "Interstellar", "Avengers"];
+console.log(`The last movie I watched was - ${favoriteMovies[2]}`);
+
+// ===
+
+let playerInventory = ["Sword", "Shield", "Health Potion"];
+playerInventory[1] = "Magic Amulet";
+console.log(`Інвентар (${playerInventory})`);
+
+// ===
+
+let chatMessages = ["Hi", "How are you?", "Call me"];
+let messagesCount = chatMessages.length;
+console.log(`У вас - ${messagesCount} не прочитаних повідомлень`);
+
+// ===
+
+let dailyTasks = ["Learn JS", "I love working out"];
+dailyTasks.push("Watch a movie");
+console.log(`${dailyTasks}`);
