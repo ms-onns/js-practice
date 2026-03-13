@@ -229,3 +229,46 @@ let shoppingCart = ["Laptop", "Maus", "Keyboard"];
 for (let item of shoppingCart) {
   console.log(`Товар у кошику ${item}`);
 }
+console.log("-------------------------------------");
+
+// ==========================================
+// Об'єкти (Objects) - Папки з даними
+// ==========================================
+
+let player = {
+  username: "CyberNinja",
+  level: 12,
+  isOnline: true,
+};
+player.level = 13;
+player.guild = "Red Dragons";
+console.log(`Гравець ${player.username} досяг рівня - ${player.level}`);
+console.log(`Гравець ${player.username} вступає в ${player.guild}`);
+
+// ===
+
+let smartphone = {
+  brand: "Samsung",
+  battery: 45,
+  isFlashlightOn: false,
+};
+
+smartphone.battery = 100;
+smartphone.isFlashlightOn = true;
+console.log(
+  `Телефон ${smartphone.brand} заряджено на ${smartphone.battery}%. Ліхтарик увімкнено: ${smartphone.isFlashlightOn}`,
+);
+
+// ===
+
+let product = {
+  title: "Nike",
+  price: 3000,
+  isAvailable: true,
+};
+
+product.price = 2400;
+product.discount = "-20%";
+console.log(
+  `Увага! Товар ${product.title} тепер коштує ${product.price} грн. Ваша знижка: ${product.discount}`,
+);
