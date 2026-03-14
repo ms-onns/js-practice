@@ -312,3 +312,43 @@ function doDamage(weapon, damage) {
 doDamage("Меч", 50);
 doDamage("Лук", 25);
 doDamage("Фаєрбол", 100);
+console.log("-------------------------------------");
+
+// ==========================================
+// Функції + Цикли (Схрещення)
+// ==========================================
+let serverPlayers = ["CyberNinja", "DarkMage", "BobaFett", "IronMan"];
+function sendGift(player) {
+  console.log(`Гравцю ${player} відправлено подарунковий бокс! 🎁`);
+}
+for (let player of serverPlayers) {
+  sendGift(player);
+}
+
+// ===
+
+let playerLevels = [5, 12, 3, 25, 9, 10];
+function checkAccess(level) {
+  if (level >= 10) {
+    console.log(`Доступ відкрито! Рівень: ${level}`);
+  } else {
+    console.log(`Заборонено. Потрібен 10+ рівень! Ваш: ${level}`);
+  }
+}
+for (let level of playerLevels) {
+  checkAccess(level);
+}
+
+// ===
+
+let cart = [
+  { name: "Laptop", price: 25000 },
+  { name: "Maus", price: 800 },
+  { name: "Keyboard", price: 1400 },
+];
+function processItem(item) {
+  console.log(`Product: ${item.name}, Price: ${item.price}$`);
+}
+for (let item of cart) {
+  processItem(item);
+}
