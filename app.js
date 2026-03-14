@@ -208,10 +208,12 @@ console.log("-------------------------------------");
 // Цикли (Loops) - цикл for
 // ==========================================
 for (let i = 1; i <= 5; i++) {
+  // пам'ятати: i = 1 це старт, i <= 5 умова поки працює, i++ додає по одному
   console.log(i);
 }
 
 for (let i = 5; i >= 1; i--) {
+  // зворотній відлік: починаю з 5, поки не дійде до 1, i-- віднімає по одному
   console.log(i);
 }
 
@@ -220,6 +222,7 @@ for (let i = 5; i >= 1; i--) {
 let clients = ["Mike", "Fred", "Li"];
 
 for (let i = 0; i < clients.length; i++) {
+  // перебираю масив: починаю з 0 бо індекси завжди з нуля, і кручу до кінця списку через length
   console.log(`Вітаємо ${clients[i]}`);
 }
 
@@ -227,6 +230,7 @@ for (let i = 0; i < clients.length; i++) {
 
 let shoppingCart = ["Laptop", "Maus", "Keyboard"];
 for (let item of shoppingCart) {
+  // лінивий цикл for...of: просто бере кожен елемент по черзі і кидає в item
   console.log(`Товар у кошику ${item}`);
 }
 console.log("-------------------------------------");
@@ -239,8 +243,8 @@ let player = {
   level: 12,
   isOnline: true,
 };
-player.level = 13;
-player.guild = "Red Dragons";
+player.level = 13; // змінюю існуюче значення просто через крапку
+player.guild = "Red Dragons"; // а ось так додаю нову властивість якої раніше взагалі не було
 console.log(`Гравець ${player.username} досяг рівня - ${player.level}`);
 console.log(`Гравець ${player.username} вступає в ${player.guild}`);
 
@@ -252,8 +256,8 @@ let smartphone = {
   isFlashlightOn: false,
 };
 
-smartphone.battery = 100;
-smartphone.isFlashlightOn = true;
+smartphone.battery = 100; // зарядив телефон
+smartphone.isFlashlightOn = true; // увімкнув ліхтарик
 console.log(
   `Телефон ${smartphone.brand} заряджено на ${smartphone.battery}%. Ліхтарик увімкнено: ${smartphone.isFlashlightOn}`,
 );
@@ -266,8 +270,8 @@ let product = {
   isAvailable: true,
 };
 
-product.price = 2400;
-product.discount = "-20%";
+product.price = 2400; // знизив ціну
+product.discount = "-20%"; // додав знижку
 console.log(
   `Увага! Товар ${product.title} тепер коштує ${product.price} грн. Ваша знижка: ${product.discount}`,
 );
@@ -282,6 +286,7 @@ let posts = [
 ];
 
 for (let post of posts) {
+  // перебираю масив об'єктів: post це поточний об'єкт, а через крапку дістаю його середину
   console.log(`User "${post.author}" - ${post.text}`);
 }
 console.log("-------------------------------------");
@@ -290,26 +295,29 @@ console.log("-------------------------------------");
 // Функції (Functions) - Фабрики коду
 // ==========================================
 function showWarning() {
+  // створив функцію. код спить поки я його не викличу
   console.log("УВАГА! Низький заряд батареї!");
 }
+showWarning(); // викликаю функцію
 showWarning();
-showWarning();
-showWarning();
+showWarning(); // можу викликати скільки завгодно разів
 
 // ===
 
 function welcomePlayer(playerName) {
+  // playerName це параметр. сюди залетить те, що я передам в дужках нижче
   console.log(`Гравець ${playerName} підключився до сервера!`);
 }
-welcomePlayer("CyberNinja");
+welcomePlayer("CyberNinja"); // передаю конкретне ім'я у функцію
 welcomePlayer("DarkMage");
 
 // ===
 
 function doDamage(weapon, damage) {
+  // функція спокійно приймає кілька параметрів через кому
   console.log(`Ви використали ${weapon} і нанесли ${damage} одиниць шкоди!`);
 }
-doDamage("Меч", 50);
+doDamage("Меч", 50); // передаю одразу два значення: зброю та урон
 doDamage("Лук", 25);
 doDamage("Фаєрбол", 100);
 console.log("-------------------------------------");
@@ -318,24 +326,32 @@ console.log("-------------------------------------");
 // Функції + Цикли (Схрещення)
 // ==========================================
 let serverPlayers = ["CyberNinja", "DarkMage", "BobaFett", "IronMan"];
+
 function sendGift(player) {
+  // ця функція вміє відправляти подарунок тільки одному гравцю
   console.log(`Гравцю ${player} відправлено подарунковий бокс! 🎁`);
 }
+
 for (let player of serverPlayers) {
+  // тут цикл бере гравців з масиву і по черзі закидає їх у функцію
   sendGift(player);
 }
 
 // ===
 
 let playerLevels = [5, 12, 3, 25, 9, 10];
+
 function checkAccess(level) {
+  // важливо: перевіряю конкретний level (одну цифру), а не весь масив
   if (level >= 10) {
     console.log(`Доступ відкрито! Рівень: ${level}`);
   } else {
     console.log(`Заборонено. Потрібен 10+ рівень! Ваш: ${level}`);
   }
 }
+
 for (let level of playerLevels) {
+  // цикл закидає кожну цифру у функцію перевірки
   checkAccess(level);
 }
 
@@ -346,9 +362,12 @@ let cart = [
   { name: "Maus", price: 800 },
   { name: "Keyboard", price: 1400 },
 ];
+
 function processItem(item) {
+  // функція приймає цілий об'єкт і дістає потрібне через крапку
   console.log(`Product: ${item.name}, Price: ${item.price}$`);
 }
+
 for (let item of cart) {
-  processItem(item);
+  processItem(item); // перебираю кошик і кожен товар кидаю у функцію
 }
