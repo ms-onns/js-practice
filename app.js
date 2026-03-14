@@ -271,7 +271,7 @@ product.discount = "-20%";
 console.log(
   `Увага! Товар ${product.title} тепер коштує ${product.price} грн. Ваша знижка: ${product.discount}`,
 );
-console.log();
+console.log("-------------------------------------");
 
 // ==========================================
 // *TEST Стрічка соцмережі
@@ -284,3 +284,31 @@ let posts = [
 for (let post of posts) {
   console.log(`User "${post.author}" - ${post.text}`);
 }
+console.log("-------------------------------------");
+
+// ==========================================
+// Функції (Functions) - Фабрики коду
+// ==========================================
+function showWarning() {
+  console.log("УВАГА! Низький заряд батареї!");
+}
+showWarning();
+showWarning();
+showWarning();
+
+// ===
+
+function welcomePlayer(playerName) {
+  console.log(`Гравець ${playerName} підключився до сервера!`);
+}
+welcomePlayer("CyberNinja");
+welcomePlayer("DarkMage");
+
+// ===
+
+function doDamage(weapon, damage) {
+  console.log(`Ви використали ${weapon} і нанесли ${damage} одиниць шкоди!`);
+}
+doDamage("Меч", 50);
+doDamage("Лук", 25);
+doDamage("Фаєрбол", 100);
