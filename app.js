@@ -234,7 +234,6 @@ console.log("-------------------------------------");
 // ==========================================
 // Об'єкти (Objects) - Папки з даними
 // ==========================================
-
 let player = {
   username: "CyberNinja",
   level: 12,
@@ -272,3 +271,16 @@ product.discount = "-20%";
 console.log(
   `Увага! Товар ${product.title} тепер коштує ${product.price} грн. Ваша знижка: ${product.discount}`,
 );
+console.log();
+
+// ==========================================
+// *TEST Стрічка соцмережі
+// ==========================================
+let posts = [
+  { author: "Max", text: "Started learning JavaScript" },
+  { author: "Anna", text: "Learned TypeScript" },
+];
+
+for (let post of posts) {
+  console.log(`User "${post.author}" - ${post.text}`);
+}
