@@ -371,3 +371,70 @@ function processItem(item) {
 for (let item of cart) {
   processItem(item); // перебираю кошик і кожен товар кидаю у функцію
 }
+console.log("-------------------------------------");
+
+// ==========================================
+// Оператор return (Повернення результату)
+// ==========================================
+function calculateSalary(hours, rate) {
+  // return не просто друкує в консоль, а реально віддає результат назовні
+  return hours * rate;
+}
+let mySalary = calculateSalary(8, 500); // ловлю результат роботи заводу в коробку (змінну)
+console.log(mySalary);
+
+// ===
+
+function getDamage(baseDamage, isCritical) {
+  // return миттєво зупиняє функцію. Якщо удар критичний - віддаю х2 і виходжу
+  if (isCritical === true) {
+    return baseDamage * 2;
+  } else {
+    return baseDamage; // інакше віддаю звичайний урон
+  }
+}
+let normalHit = getDamage(50, false);
+let superHit = getDamage(50, true);
+console.log(normalHit, superHit);
+
+// ===
+
+function withdrawMoney(balance, amount) {
+  // Перевірка в банкоматі. Функція повертає різні тексти залежно від умови
+  if (amount <= balance) {
+    return "Операція успішна! Гроші видано.";
+  } else {
+    return "Відмова! Недостатньо коштів на рахунку.";
+  }
+}
+let successTransaction = withdrawMoney(10000, 2000);
+let failTransaction = withdrawMoney(5000, 8000);
+console.log(successTransaction);
+console.log(failTransaction);
+console.log("-------------------------------------");
+
+// ==========================================
+// Стрілочні функції (Arrow Functions)
+// ==========================================
+let calculateFinalPrice = (price, discount) => {
+  // Сучасний запис. Замість довгого слова function ставлю стрілочку =>
+  return price - discount;
+};
+let finalPay = calculateFinalPrice(1000, 200);
+console.log(finalPay);
+
+// ===
+
+// Ультра короткий запис (Магія неявного return)
+// Якщо дія всього одна, я викидаю {} і слово return. Стрілочка повертає результат автоматично!
+let multiplyByTen = (number) => number * 10;
+let result = multiplyByTen(5);
+console.log(result);
+
+// ===
+
+// Перевірка, яка повертає просто true або false. Дуже знадобиться потім для фільтрації масивів!
+let checkAge = (age) => age >= 18;
+let userOne = checkAge(25);
+let userTwo = checkAge(15);
+console.log(userOne, userTwo);
