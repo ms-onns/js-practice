@@ -23,3 +23,39 @@ let profile = document.querySelector(".user-profile");
 profile.innerHTML = "<h2>Джон Доу</h2><p>Рівень: Адмін</p>";
 profile.style.border = "2px solid black";
 profile.style.padding = "10px";
+
+// ==========================================
+// Події (Events) - Реакція на дії користувача
+// ==========================================
+
+// Отримую елементи з DOM
+let btn = document.querySelector(".action-btn");
+let result = document.querySelector(".result-text");
+// Вішаю слухача на клік. Змінюю текст при спрацьовуванні.
+btn.addEventListener("click", () => {
+  result.textContent = "Кнопку натиснуто. Система зареєструвала подію.";
+});
+
+// =============================================================
+
+// Зміна візуального стану елемента
+let box = document.querySelector(".status-box");
+let activate = document.querySelector(".activate-btn");
+// При кліку змінюю контент та стилі блоку
+activate.addEventListener("click", () => {
+  box.innerHTML = "Система активована";
+  box.style.backgroundColor = "green";
+  box.style.color = "white";
+});
+
+// =============================================================
+
+// Лічильник кліків із збереженням стану
+let clicks = 0; // Зовнішня змінна для збереження рахунку між кліками
+let clicker = document.querySelector(".clicker-btn");
+let scoreDisplay = document.querySelector(".score-value");
+// Інкрементую змінну та оновлюю DOM при кожному кліку
+clicker.addEventListener("click", () => {
+  clicks++;
+  scoreDisplay.textContent = clicks;
+});
