@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Sandbox</title>
+  <style>
+    /* Базові стилі для пісочниці */
+    body { font-family: sans-serif; padding: 20px; transition: 0.3s; }
+    
+    /* Клас для Завдання 1: Темна тема */
+    .dark-theme { background-color: #222; color: #fff; }
+    
+    /* Клас для Завдання 2: Приховування елементів */
+    .hidden { display: none; }
+    .modal-box { padding: 20px; border: 2px solid #333; margin-top: 10px; background: #f9f9f9; color: #000; }
+    
+    /* Класи для Завдання 3: Статуси */
+    .error { color: red; font-weight: bold; }
+    .success { color: green; font-weight: bold; }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h3>1. Перемикач теми (Toggle)</h3>
+    <button class="theme-btn">Змінити тему сторінки</button>
+    <hr>
+  </div>
+
+  <div>
+    <h3>2. Модальне вікно (Add / Remove)</h3>
+    <button class="open-modal-btn">Показати секрет</button>
+    <div class="modal-box hidden">
+      <p>Це таємне повідомлення! Нікому не кажи.</p>
+      <button class="close-modal-btn">Сховати</button>
+    </div>
+    <hr>
+  </div>
+
+
+  <div>
+    <h3>3. Жива перевірка (Подія "input")</h3>
+    <input type="text" class="live-input" placeholder="Введіть мінімум 5 символів">
+    <p class="live-status error">Занадто коротко!</p>
+  </div>
+
+  <script src="../archive_js/08-classlist.js"></script>
+</body>
+</html>
