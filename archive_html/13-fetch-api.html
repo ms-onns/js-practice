@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Sandbox: Fetch API</title>
+    <style>
+      body { font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 20px; }
+      .section { margin-bottom: 30px; padding: 15px; border: 1px solid #30363d; border-radius: 8px; background: #161b22; }
+      h3 { color: #58a6ff; margin-top: 0; border-bottom: 1px solid #30363d; padding-bottom: 5px;}
+      button { background: #238636; color: white; border: 1px solid #2ea043; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-family: monospace; }
+      button:hover { background: #2ea043; }
+      .data-box { margin-top: 15px; padding: 15px; border: 1px dashed #8b949e; background: #010409; min-height: 50px; }
+    </style>
+  </head>
+  <body>
+
+    <div class="section">
+      <h3>1. Запит даних користувача (GET)</h3>
+      <p>Стукаємо на реальний тестовий сервер і забираємо ім'я хакера.</p>
+      <button class="btn-fetch-user">Зв'язок із сервером</button>
+      <div class="data-box user-box">Очікування підключення...</div>
+    </div>
+
+    <div class="section">
+      <h3>2. Запит масиву даних</h3>
+      <p>Забираємо з сервера список задач (Todos).</p>
+      <button class="btn-fetch-todos">Завантажити задачі</button>
+      <div class="data-box todos-box">Очікування підключення...</div>
+    </div>
+
+    <div class="section">
+      <h3>3. Рендер списку з сервера (Fetch + Map)</h3>
+      <p>Забираємо цілий масив хакерів і малюємо їхні картки.</p>
+      <button class="btn-fetch-list">Завантажити базу</button>
+      <div class="data-box list-box">Очікування підключення...</div>
+    </div>
+
+    <script src="../archive_js/13-fetch-api.js"></script>
+  </body>
+</html>
