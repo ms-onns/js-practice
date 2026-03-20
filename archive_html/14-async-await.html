@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Sandbox: Async / Await</title>
+    <style>
+      body { font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 20px; }
+      .section { margin-bottom: 30px; padding: 15px; border: 1px solid #30363d; border-radius: 8px; background: #161b22; }
+      h3 { color: #58a6ff; margin-top: 0; border-bottom: 1px solid #30363d; padding-bottom: 5px;}
+      button { background: #238636; color: white; border: 1px solid #2ea043; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-family: monospace; }
+      button:hover { background: #2ea043; }
+      .data-box { margin-top: 15px; padding: 15px; border: 1px dashed #8b949e; background: #010409; min-height: 50px; }
+      .error-text { color: #ff7b72; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+
+    <div class="section">
+      <h3>1. Сучасний запит (async / await)</h3>
+      <p>Забираємо дані без ланцюжків .then()</p>
+      <button class="btn-async">Завантажити профіль</button>
+      <div class="data-box async-box">Очікування...</div>
+    </div>
+
+    <div class="section">
+      <h3>2. Обробка помилок (try / catch)</h3>
+      <p>Що буде, якщо сервер впав або немає інтернету?</p>
+      <button class="btn-error">Зламати сервер</button>
+      <div class="data-box error-box">Очікування...</div>
+    </div>
+
+    <div class="section">
+      <h3>3. Комбінація: Async/Await + Map</h3>
+      <p>Безпечно завантажуємо масив постів з обробкою помилок.</p>
+      <button class="btn-final">Завантажити пости</button>
+      <div class="data-box final-box">Очікування...</div>
+    </div>
+
+    <script src="../archive_js/14-async-await.js"></script>
+  </body>
+</html>
