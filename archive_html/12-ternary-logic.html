@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Sandbox: Ternary & Logic</title>
+  <style>
+    body { font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 20px; }
+    .section { margin-bottom: 30px; padding: 15px; border: 1px solid #30363d; border-radius: 8px; background: #161b22; }
+    h3 { color: #58a6ff; margin-top: 0; border-bottom: 1px solid #30363d; padding-bottom: 5px;}
+    button { background: #238636; color: white; border: 1px solid #2ea043; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-family: monospace; }
+    button:hover { background: #2ea043; }
+    .status-box { margin-top: 10px; padding: 10px; border: 1px dashed #8b949e; }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h3>1. Тернарний оператор (? :)</h3>
+    <p>Заміна довгого if/else на один рядок.</p>
+    <button class="btn-ternary">Перевірити статус</button>
+    <div class="status-box box-1">Очікування...</div>
+  </div>
+
+  <div class="section">
+    <h3>2. Коротке замикання (&&)</h3>
+    <p>Рендер за умови: "Якщо true — покажи, якщо false — ігноруй".</p>
+    <button class="btn-and">Перевірити доступи</button>
+    <div class="status-box box-2">Очікування...</div>
+  </div>
+
+  <div class="section">
+    <h3>3. Значення за замовчуванням (||)</h3>
+    <p>Якщо даних немає — підстав запасний варіант.</p>
+    <button class="btn-or">Завантажити профіль</button>
+    <div class="status-box box-3">Очікування...</div>
+  </div>
+
+  <script src="../archive_js/12-ternary-logic.js"></script>
+</body>
+</html>
